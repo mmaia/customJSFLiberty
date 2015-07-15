@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ibm.wwwcmt.customjsf.liberty</groupId>
-	<artifactId>CustomJSFLiberty</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>Custom JSF with Liberty</name>
+	<artifactId>CustomJSFWAS</artifactId>
+	<version>0.0.2</version>
+	<name>Custom JSF with Liberty 8.5.5.6 and WAS N.D 8.5.5.x</name>
 	<description>
 		Project that shows how to use some external custom JSF implementation like Mojarra instead of using defaul Liberty 
 		implementation based on Apache MyFaces
@@ -28,19 +28,19 @@
 			<groupId>org.glassfish</groupId>
 			<artifactId>javax.faces</artifactId>
 			<version>2.2.11</version>
-			<scope>runtime</scope>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
 			<version>2.2.11</version>
-			<scope>runtime</scope>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.faces</groupId>
 			<artifactId>javax.faces-api</artifactId>
 			<version>2.2</version>
-			<scope>runtime</scope>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	<build>
@@ -49,9 +49,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
-				<configuration>
-					<webappDirectory>/src/main/webapp</webappDirectory>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
